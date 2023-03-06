@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Lindsey Rogers">
+<meta name="dcterms.date" content="2023-03-06">
+<meta name="description" content="Testing Quarto">
+
+<title>sheriffblog - First File</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">sheriffblog</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">First File</h1>
+                  <div>
+        <div class="description">
+          Testing Quarto
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Lindsey Rogers </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 6, 2023</p>
+      </div>
+    </div>
+    
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">March 6, 2023</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># importing packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> contextily <span class="im">as</span> ctx</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> folium</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="primary-research-questions" class="level1">
+<h1>Primary Research Questions</h1>
+<section id="how-has-sheriff-violence-changed-over-time-compared-to-police-violence" class="level2">
+<h2 class="anchored" data-anchor-id="how-has-sheriff-violence-changed-over-time-compared-to-police-violence">1. How has sheriff violence changed over time compared to police violence?</h2>
+</section>
+<section id="where-is-sheriff-violence-happening-are-there-spatial-trends" class="level2">
+<h2 class="anchored" data-anchor-id="where-is-sheriff-violence-happening-are-there-spatial-trends">2. Where is sheriff violence happening? Are there spatial trends?</h2>
+</section>
+</section>
+<section id="introduction-to-research-topic" class="level1">
+<h1>Introduction to Research Topic</h1>
+<p>This project is a continuation of my work on Constitutional Sheriffs in the United States. For background, Constitutional Sheriffs are elected county sheriffs that believe and act as thought the county sheriff is the highest authority - higher than both the state and federal government. These sheriffs are self-described and are often tracked through membership in constitutional sheriff groups, but this data is not published.</p>
+<p>This project provides a proof of concept that sheriff violence can be analyzed quantitativly using Python coding for my methodology. The next steps for this project, addressed in this notebook is a temporal analysis of sheriff violence in the United States, which will later be incorproated into my geospatial analysis research.</p>
+<section id="importing-data-and-preliminary-exploration" class="level2">
+<h2 class="anchored" data-anchor-id="importing-data-and-preliminary-exploration">Importing Data and Preliminary Exploration</h2>
+<p>The first part of any data project is downloading data and taking a look at the format and contents of the data.This project draws on several datasets relating to police and sheriff violence in the United States.</p>
+<p>The first dataset is the <a href="https://mappingpoliceviolence.org/">Mapping Police Violence database</a>. This is a collection of data on civilians killed by police or sheriff officers since 2013. The dataset has over 10,000 entries with information such as the name of the victim, the agency responsible, and the lat and long location of the death.</p>
+<p>The second dataset is the <a href="https://uclacovidbehindbars.org/intro-carceral-mortality">UCLA Law COVID 19 Behind Bars dataset</a>. This dataset is primarly focued on collecting information relating to deaths within US federal prisons. Relating to sheriff violence, there are a few points of data relating to deaths within county prisons. This data, collected by facility, will be extracted for analysis.</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mpv <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/lindseyrogers/DH140_final_sheriffs/main/MPV_Simplified2.csv'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>mpv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>name</th>
+      <th>age</th>
+      <th>gender</th>
+      <th>race</th>
+      <th>date</th>
+      <th>street_address</th>
+      <th>city</th>
+      <th>state</th>
+      <th>zip</th>
+      <th>county</th>
+      <th>...</th>
+      <th>wapo_armed</th>
+      <th>wapo_threat_level</th>
+      <th>wapo_flee</th>
+      <th>wapo_body_camera</th>
+      <th>encounter_type</th>
+      <th>initial_reason</th>
+      <th>officer_names</th>
+      <th>call_for_service</th>
+      <th>latitude</th>
+      <th>longitude</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Warren Merriman</td>
+      <td>NaN</td>
+      <td>Male</td>
+      <td>NaN</td>
+      <td>12/28/2022</td>
+      <td>100 block of East 4th Street</td>
+      <td>San Bernardino</td>
+      <td>CA</td>
+      <td>92410.0</td>
+      <td>San Bernardino</td>
+      <td>...</td>
+      <td>Knife</td>
+      <td>Sudden Threatening Movement</td>
+      <td>Not Fleeing</td>
+      <td>Yes</td>
+      <td>Part 1 Violent Crime/Domestic disturbance</td>
+      <td>domestic violence incident, assault</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>34.106475</td>
+      <td>-117.284968</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Terry L. Bowman</td>
+      <td>39.0</td>
+      <td>Male</td>
+      <td>White</td>
+      <td>12/28/2022</td>
+      <td>15000 block of U.S. 40 Highway</td>
+      <td>Independence</td>
+      <td>MO</td>
+      <td>64015.0</td>
+      <td>Jackson</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Brandished Weapon</td>
+      <td>Not Fleeing</td>
+      <td>NaN</td>
+      <td>Person with a Weapon</td>
+      <td>Suspicious Vehicle</td>
+      <td>NaN</td>
+      <td>No</td>
+      <td>39.008752</td>
+      <td>-94.299621</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Monet Darrisaw</td>
+      <td>34.0</td>
+      <td>Female</td>
+      <td>Black</td>
+      <td>12/27/2022</td>
+      <td>intersection of West Boulevard and Donald Ross...</td>
+      <td>Charlotte</td>
+      <td>NC</td>
+      <td>28208.0</td>
+      <td>Mecklenburg</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>None</td>
+      <td>Car</td>
+      <td>NaN</td>
+      <td>Traffic Stop</td>
+      <td>Suspicious Vehicle</td>
+      <td>NaN</td>
+      <td>No</td>
+      <td>35.212482</td>
+      <td>-80.893267</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Trevontay Jenkins</td>
+      <td>16.0</td>
+      <td>Male</td>
+      <td>NaN</td>
+      <td>12/26/2022</td>
+      <td>400 E. McKinley Ave</td>
+      <td>Des Moines</td>
+      <td>IA</td>
+      <td>50315.0</td>
+      <td>Polk</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Brandished Weapon</td>
+      <td>Not Fleeing</td>
+      <td>Yes</td>
+      <td>Person with a Weapon</td>
+      <td>Domestic Disturbance</td>
+      <td>Noah Bollinger, Zachary Duitscher, Thomas Garcia</td>
+      <td>Yes</td>
+      <td>41.540948</td>
+      <td>-93.620034</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Zachary D. Zoran</td>
+      <td>34.0</td>
+      <td>Male</td>
+      <td>White</td>
+      <td>12/26/2022</td>
+      <td>500 block of W. Hopocan Avenue</td>
+      <td>Barberton</td>
+      <td>OH</td>
+      <td>44203.0</td>
+      <td>Summit</td>
+      <td>...</td>
+      <td>Knife</td>
+      <td>Brandished Weapon</td>
+      <td>Not Fleeing</td>
+      <td>Yes</td>
+      <td>Person with a Weapon</td>
+      <td>Robbery</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>41.017202</td>
+      <td>-81.587719</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>11164</th>
+      <td>Mark Chavez</td>
+      <td>49.0</td>
+      <td>Male</td>
+      <td>Hispanic</td>
+      <td>1/1/2013</td>
+      <td>912 Loma Linda Ave.</td>
+      <td>Farmington</td>
+      <td>NM</td>
+      <td>87401.0</td>
+      <td>San Juan</td>
+      <td>...</td>
+      <td>Blunt Object</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>36.739514</td>
+      <td>-108.201029</td>
+    </tr>
+    <tr>
+      <th>11165</th>
+      <td>Tyree Bell</td>
+      <td>31.0</td>
+      <td>Male</td>
+      <td>Black</td>
+      <td>1/1/2013</td>
+      <td>3727 N. 42nd St.</td>
+      <td>Omaha</td>
+      <td>NE</td>
+      <td>68111.0</td>
+      <td>Douglas</td>
+      <td>...</td>
+      <td>Gun</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>41.293110</td>
+      <td>-95.975491</td>
+    </tr>
+    <tr>
+      <th>11166</th>
+      <td>Andrew L. Closson</td>
+      <td>21.0</td>
+      <td>Male</td>
+      <td>White</td>
+      <td>1/1/2013</td>
+      <td>U.S. Highway 53</td>
+      <td>Gordon</td>
+      <td>WI</td>
+      <td>54838.0</td>
+      <td>Douglas</td>
+      <td>...</td>
+      <td>Gun</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>46.245268</td>
+      <td>-91.801031</td>
+    </tr>
+    <tr>
+      <th>11167</th>
+      <td>Abel Gurrola</td>
+      <td>26.0</td>
+      <td>Male</td>
+      <td>Hispanic</td>
+      <td>1/1/2013</td>
+      <td>720 Terrace Way</td>
+      <td>Bakersfield</td>
+      <td>CA</td>
+      <td>93304.0</td>
+      <td>Kern</td>
+      <td>...</td>
+      <td>Gun</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>35.350508</td>
+      <td>-119.011261</td>
+    </tr>
+    <tr>
+      <th>11168</th>
+      <td>Andrew Layton</td>
+      <td>26.0</td>
+      <td>Male</td>
+      <td>White</td>
+      <td>1/1/2013</td>
+      <td>410 S Riverfront Drive</td>
+      <td>Mankato</td>
+      <td>MN</td>
+      <td>56001.0</td>
+      <td>Blue Earth</td>
+      <td>...</td>
+      <td>No Object</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>44.164679</td>
+      <td>-94.007459</td>
+    </tr>
+  </tbody>
+</table>
+<p>11169 rows × 27 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mpv.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>name</th>
+      <th>age</th>
+      <th>gender</th>
+      <th>race</th>
+      <th>date</th>
+      <th>street_address</th>
+      <th>city</th>
+      <th>state</th>
+      <th>zip</th>
+      <th>county</th>
+      <th>...</th>
+      <th>wapo_armed</th>
+      <th>wapo_threat_level</th>
+      <th>wapo_flee</th>
+      <th>wapo_body_camera</th>
+      <th>encounter_type</th>
+      <th>initial_reason</th>
+      <th>officer_names</th>
+      <th>call_for_service</th>
+      <th>latitude</th>
+      <th>longitude</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Warren Merriman</td>
+      <td>NaN</td>
+      <td>Male</td>
+      <td>NaN</td>
+      <td>12/28/2022</td>
+      <td>100 block of East 4th Street</td>
+      <td>San Bernardino</td>
+      <td>CA</td>
+      <td>92410.0</td>
+      <td>San Bernardino</td>
+      <td>...</td>
+      <td>Knife</td>
+      <td>Sudden Threatening Movement</td>
+      <td>Not Fleeing</td>
+      <td>Yes</td>
+      <td>Part 1 Violent Crime/Domestic disturbance</td>
+      <td>domestic violence incident, assault</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>34.106475</td>
+      <td>-117.284968</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Terry L. Bowman</td>
+      <td>39.0</td>
+      <td>Male</td>
+      <td>White</td>
+      <td>12/28/2022</td>
+      <td>15000 block of U.S. 40 Highway</td>
+      <td>Independence</td>
+      <td>MO</td>
+      <td>64015.0</td>
+      <td>Jackson</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Brandished Weapon</td>
+      <td>Not Fleeing</td>
+      <td>NaN</td>
+      <td>Person with a Weapon</td>
+      <td>Suspicious Vehicle</td>
+      <td>NaN</td>
+      <td>No</td>
+      <td>39.008752</td>
+      <td>-94.299621</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Monet Darrisaw</td>
+      <td>34.0</td>
+      <td>Female</td>
+      <td>Black</td>
+      <td>12/27/2022</td>
+      <td>intersection of West Boulevard and Donald Ross...</td>
+      <td>Charlotte</td>
+      <td>NC</td>
+      <td>28208.0</td>
+      <td>Mecklenburg</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>None</td>
+      <td>Car</td>
+      <td>NaN</td>
+      <td>Traffic Stop</td>
+      <td>Suspicious Vehicle</td>
+      <td>NaN</td>
+      <td>No</td>
+      <td>35.212482</td>
+      <td>-80.893267</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Trevontay Jenkins</td>
+      <td>16.0</td>
+      <td>Male</td>
+      <td>NaN</td>
+      <td>12/26/2022</td>
+      <td>400 E. McKinley Ave</td>
+      <td>Des Moines</td>
+      <td>IA</td>
+      <td>50315.0</td>
+      <td>Polk</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Brandished Weapon</td>
+      <td>Not Fleeing</td>
+      <td>Yes</td>
+      <td>Person with a Weapon</td>
+      <td>Domestic Disturbance</td>
+      <td>Noah Bollinger, Zachary Duitscher, Thomas Garcia</td>
+      <td>Yes</td>
+      <td>41.540948</td>
+      <td>-93.620034</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Zachary D. Zoran</td>
+      <td>34.0</td>
+      <td>Male</td>
+      <td>White</td>
+      <td>12/26/2022</td>
+      <td>500 block of W. Hopocan Avenue</td>
+      <td>Barberton</td>
+      <td>OH</td>
+      <td>44203.0</td>
+      <td>Summit</td>
+      <td>...</td>
+      <td>Knife</td>
+      <td>Brandished Weapon</td>
+      <td>Not Fleeing</td>
+      <td>Yes</td>
+      <td>Person with a Weapon</td>
+      <td>Robbery</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>41.017202</td>
+      <td>-81.587719</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 27 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>mpv.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>Index(['name', 'age', 'gender', 'race', 'date', 'street_address', 'city',
+       'state', 'zip', 'county', 'agency_responsible', 'cause_of_death',
+       'circumstances', 'disposition_official', 'officer_charged',
+       'signs_of_mental_illness', 'allegedly_armed', 'wapo_armed',
+       'wapo_threat_level', 'wapo_flee', 'wapo_body_camera', 'encounter_type',
+       'initial_reason', 'officer_names', 'call_for_service', 'latitude',
+       'longitude'],
+      dtype='object')</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(mpv)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>11169</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>lfc <span class="op">=</span> pd.read_csv(<span class="st">'https://media.githubusercontent.com/media/uclalawcovid19behindbars/data/master/latest-data/latest_facility_counts.csv'</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>lfc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Facility.ID</th>
+      <th>Jurisdiction</th>
+      <th>State</th>
+      <th>Name</th>
+      <th>Date</th>
+      <th>source</th>
+      <th>Residents.Confirmed</th>
+      <th>Staff.Confirmed</th>
+      <th>Residents.Deaths</th>
+      <th>Staff.Deaths</th>
+      <th>...</th>
+      <th>Staff.Vadmin</th>
+      <th>Web.Group</th>
+      <th>Address</th>
+      <th>Zipcode</th>
+      <th>City</th>
+      <th>County</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>County.FIPS</th>
+      <th>ICE.Field.Office</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>state</td>
+      <td>Alabama</td>
+      <td>ALABAMA HEADQUARTERS</td>
+      <td>2023-01-18</td>
+      <td>http://www.doc.alabama.gov/covid19news</td>
+      <td>0.0</td>
+      <td>160.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Prison</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>state</td>
+      <td>Alabama</td>
+      <td>ALABAMA TREATMENT AND EDUCATION FACILITY</td>
+      <td>2023-01-18</td>
+      <td>http://www.doc.alabama.gov/covid19news</td>
+      <td>47.0</td>
+      <td>7.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Prison</td>
+      <td>102 INDUSTRIAL PARKWAY</td>
+      <td>35051.0</td>
+      <td>COLUMBIANA</td>
+      <td>SHELBY</td>
+      <td>33.181005</td>
+      <td>-86.624017</td>
+      <td>1117.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>state</td>
+      <td>Alabama</td>
+      <td>ALEX CITY COMMUNITY BASED FACILITY</td>
+      <td>2023-01-18</td>
+      <td>http://www.doc.alabama.gov/covid19news</td>
+      <td>85.0</td>
+      <td>43.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Prison</td>
+      <td>HIGHWAY 22 WEST</td>
+      <td>35011.0</td>
+      <td>ALEX CITY</td>
+      <td>COOSA</td>
+      <td>32.904471</td>
+      <td>-86.008969</td>
+      <td>1037.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5</td>
+      <td>state</td>
+      <td>Alabama</td>
+      <td>BIBB CORRECTIONAL FACILITY</td>
+      <td>2023-01-18</td>
+      <td>http://www.doc.alabama.gov/covid19news</td>
+      <td>197.0</td>
+      <td>96.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Prison</td>
+      <td>565 BIBB LANE</td>
+      <td>35034.0</td>
+      <td>BRENT</td>
+      <td>BIBB</td>
+      <td>32.922420</td>
+      <td>-87.164580</td>
+      <td>1007.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>6</td>
+      <td>state</td>
+      <td>Alabama</td>
+      <td>BIRMINGHAM COMMUNITY BASED FACILITY</td>
+      <td>2023-01-18</td>
+      <td>http://www.doc.alabama.gov/covid19news</td>
+      <td>106.0</td>
+      <td>55.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Prison</td>
+      <td>1216 25TH ST N</td>
+      <td>35234.0</td>
+      <td>BIRMINGHAM</td>
+      <td>JEFFERSON</td>
+      <td>33.531046</td>
+      <td>-86.808362</td>
+      <td>1073.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1718</th>
+      <td>2764</td>
+      <td>federal</td>
+      <td>Indiana</td>
+      <td>PACT BRADLEY CENTER</td>
+      <td>2023-01-18</td>
+      <td>https://www.bop.gov/coronavirus/</td>
+      <td>4.0</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Federal</td>
+      <td>132 E 6th St</td>
+      <td>46360.0</td>
+      <td>MICHIGAN CITY</td>
+      <td>NaN</td>
+      <td>41.716708</td>
+      <td>-86.900188</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1719</th>
+      <td>2765</td>
+      <td>federal</td>
+      <td>Oklahoma</td>
+      <td>FTC OKLAHOMA CITY</td>
+      <td>2023-01-18</td>
+      <td>https://www.bop.gov/coronavirus/</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Federal</td>
+      <td>7410 S MACARTHUR BLVD</td>
+      <td>73169.0</td>
+      <td>OKLAHOMA CITY</td>
+      <td>OKLAHOMA</td>
+      <td>35.390826</td>
+      <td>-97.616256</td>
+      <td>40109.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1720</th>
+      <td>2766</td>
+      <td>state</td>
+      <td>Vermont</td>
+      <td>VERMONT CORRECTIONAL ACADEMY</td>
+      <td>2023-01-10</td>
+      <td>https://app.powerbigov.us/view?r=eyJrIjoiMWVkO...</td>
+      <td>NaN</td>
+      <td>10.0</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Prison</td>
+      <td>1713 Industrial Parkway</td>
+      <td>5851.0</td>
+      <td>LYNDONVILLE</td>
+      <td>NaN</td>
+      <td>44.501833</td>
+      <td>-72.014097</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1721</th>
+      <td>2767</td>
+      <td>state</td>
+      <td>Washington</td>
+      <td>COMMUNITY WORK CREW</td>
+      <td>2022-11-15</td>
+      <td>https://www.doc.wa.gov/corrections/covid-19/da...</td>
+      <td>2.0</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Prison</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>47.407324</td>
+      <td>-120.575800</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1722</th>
+      <td>2768</td>
+      <td>state</td>
+      <td>Virginia</td>
+      <td>BEAUMONT CORRECTIONAL CENTER</td>
+      <td>2023-01-18</td>
+      <td>https://vadoc.virginia.gov/news-press-releases...</td>
+      <td>70.0</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Prison</td>
+      <td>3500 BEAUMONT RD</td>
+      <td>23014.0</td>
+      <td>BEAUMONT</td>
+      <td>NaN</td>
+      <td>37.665794</td>
+      <td>-77.912071</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>1723 rows × 34 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>lfc.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>Index(['Facility.ID', 'Jurisdiction', 'State', 'Name', 'Date', 'source',
+       'Residents.Confirmed', 'Staff.Confirmed', 'Residents.Deaths',
+       'Staff.Deaths', 'Residents.Tadmin', 'Residents.Tested',
+       'Residents.Active', 'Staff.Active', 'Population.Feb20',
+       'Residents.Population', 'Residents.Initiated', 'Staff.Initiated',
+       'Residents.Initiated.Pct', 'Staff.Initiated.Pct', 'Residents.Completed',
+       'Staff.Completed', 'Residents.Completed.Pct', 'Residents.Vadmin',
+       'Staff.Vadmin', 'Web.Group', 'Address', 'Zipcode', 'City', 'County',
+       'Latitude', 'Longitude', 'County.FIPS', 'ICE.Field.Office'],
+      dtype='object')</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(lfc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>1723</code></pre>
+</div>
+</div>
+<section id="initial-reaction-to-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="initial-reaction-to-the-data">Initial Reaction to the Data</h3>
+<p>I have used the Mapping Police Violence dataset before, so I am already comfortable with the data. This is the first time exploring the UCLA Prison/Jail deaths dataset. Both datasets require selecting subsets of the data to make it useable for my project.</p>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>county_facilities <span class="op">=</span> lfc.loc[lfc[<span class="st">'Jurisdiction'</span>]<span class="op">==</span><span class="st">'county'</span>]</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(county_facilities)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>125</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>mpv_new <span class="op">=</span> mpv</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>mpv_new[<span class="st">'label'</span>] <span class="op">=</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> mpv_new[<span class="st">'label'</span>]:</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">'police'</span> <span class="kw">or</span> <span class="st">'Police'</span> <span class="kw">in</span> mpv_new[<span class="st">'agency_responsible'</span>]:</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>        mpv_new[<span class="st">'label'</span>] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>mpv_new</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>name</th>
+      <th>age</th>
+      <th>gender</th>
+      <th>race</th>
+      <th>date</th>
+      <th>street_address</th>
+      <th>city</th>
+      <th>state</th>
+      <th>zip</th>
+      <th>county</th>
+      <th>...</th>
+      <th>wapo_threat_level</th>
+      <th>wapo_flee</th>
+      <th>wapo_body_camera</th>
+      <th>encounter_type</th>
+      <th>initial_reason</th>
+      <th>officer_names</th>
+      <th>call_for_service</th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Warren Merriman</td>
+      <td>NaN</td>
+      <td>Male</td>
+      <td>NaN</td>
+      <td>12/28/2022</td>
+      <td>100 block of East 4th Street</td>
+      <td>San Bernardino</td>
+      <td>CA</td>
+      <td>92410.0</td>
+      <td>San Bernardino</td>
+      <td>...</td>
+      <td>Sudden Threatening Movement</td>
+      <td>Not Fleeing</td>
+      <td>Yes</td>
+      <td>Part 1 Violent Crime/Domestic disturbance</td>
+      <td>domestic violence incident, assault</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>34.106475</td>
+      <td>-117.284968</td>
+      <td>55845</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Terry L. Bowman</td>
+      <td>39.0</td>
+      <td>Male</td>
+      <td>White</td>
+      <td>12/28/2022</td>
+      <td>15000 block of U.S. 40 Highway</td>
+      <td>Independence</td>
+      <td>MO</td>
+      <td>64015.0</td>
+      <td>Jackson</td>
+      <td>...</td>
+      <td>Brandished Weapon</td>
+      <td>Not Fleeing</td>
+      <td>NaN</td>
+      <td>Person with a Weapon</td>
+      <td>Suspicious Vehicle</td>
+      <td>NaN</td>
+      <td>No</td>
+      <td>39.008752</td>
+      <td>-94.299621</td>
+      <td>55845</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Monet Darrisaw</td>
+      <td>34.0</td>
+      <td>Female</td>
+      <td>Black</td>
+      <td>12/27/2022</td>
+      <td>intersection of West Boulevard and Donald Ross...</td>
+      <td>Charlotte</td>
+      <td>NC</td>
+      <td>28208.0</td>
+      <td>Mecklenburg</td>
+      <td>...</td>
+      <td>None</td>
+      <td>Car</td>
+      <td>NaN</td>
+      <td>Traffic Stop</td>
+      <td>Suspicious Vehicle</td>
+      <td>NaN</td>
+      <td>No</td>
+      <td>35.212482</td>
+      <td>-80.893267</td>
+      <td>55845</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Trevontay Jenkins</td>
+      <td>16.0</td>
+      <td>Male</td>
+      <td>NaN</td>
+      <td>12/26/2022</td>
+      <td>400 E. McKinley Ave</td>
+      <td>Des Moines</td>
+      <td>IA</td>
+      <td>50315.0</td>
+      <td>Polk</td>
+      <td>...</td>
+      <td>Brandished Weapon</td>
+      <td>Not Fleeing</td>
+      <td>Yes</td>
+      <td>Person with a Weapon</td>
+      <td>Domestic Disturbance</td>
+      <td>Noah Bollinger, Zachary Duitscher, Thomas Garcia</td>
+      <td>Yes</td>
+      <td>41.540948</td>
+      <td>-93.620034</td>
+      <td>55845</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Zachary D. Zoran</td>
+      <td>34.0</td>
+      <td>Male</td>
+      <td>White</td>
+      <td>12/26/2022</td>
+      <td>500 block of W. Hopocan Avenue</td>
+      <td>Barberton</td>
+      <td>OH</td>
+      <td>44203.0</td>
+      <td>Summit</td>
+      <td>...</td>
+      <td>Brandished Weapon</td>
+      <td>Not Fleeing</td>
+      <td>Yes</td>
+      <td>Person with a Weapon</td>
+      <td>Robbery</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>41.017202</td>
+      <td>-81.587719</td>
+      <td>55845</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>11164</th>
+      <td>Mark Chavez</td>
+      <td>49.0</td>
+      <td>Male</td>
+      <td>Hispanic</td>
+      <td>1/1/2013</td>
+      <td>912 Loma Linda Ave.</td>
+      <td>Farmington</td>
+      <td>NM</td>
+      <td>87401.0</td>
+      <td>San Juan</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>36.739514</td>
+      <td>-108.201029</td>
+      <td>55845</td>
+    </tr>
+    <tr>
+      <th>11165</th>
+      <td>Tyree Bell</td>
+      <td>31.0</td>
+      <td>Male</td>
+      <td>Black</td>
+      <td>1/1/2013</td>
+      <td>3727 N. 42nd St.</td>
+      <td>Omaha</td>
+      <td>NE</td>
+      <td>68111.0</td>
+      <td>Douglas</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>41.293110</td>
+      <td>-95.975491</td>
+      <td>55845</td>
+    </tr>
+    <tr>
+      <th>11166</th>
+      <td>Andrew L. Closson</td>
+      <td>21.0</td>
+      <td>Male</td>
+      <td>White</td>
+      <td>1/1/2013</td>
+      <td>U.S. Highway 53</td>
+      <td>Gordon</td>
+      <td>WI</td>
+      <td>54838.0</td>
+      <td>Douglas</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>46.245268</td>
+      <td>-91.801031</td>
+      <td>55845</td>
+    </tr>
+    <tr>
+      <th>11167</th>
+      <td>Abel Gurrola</td>
+      <td>26.0</td>
+      <td>Male</td>
+      <td>Hispanic</td>
+      <td>1/1/2013</td>
+      <td>720 Terrace Way</td>
+      <td>Bakersfield</td>
+      <td>CA</td>
+      <td>93304.0</td>
+      <td>Kern</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>35.350508</td>
+      <td>-119.011261</td>
+      <td>55845</td>
+    </tr>
+    <tr>
+      <th>11168</th>
+      <td>Andrew Layton</td>
+      <td>26.0</td>
+      <td>Male</td>
+      <td>White</td>
+      <td>1/1/2013</td>
+      <td>410 S Riverfront Drive</td>
+      <td>Mankato</td>
+      <td>MN</td>
+      <td>56001.0</td>
+      <td>Blue Earth</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>44.164679</td>
+      <td>-94.007459</td>
+      <td>55845</td>
+    </tr>
+  </tbody>
+</table>
+<p>11169 rows × 28 columns</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="graphical-data-exploration" class="level2">
+<h2 class="anchored" data-anchor-id="graphical-data-exploration">Graphical Data Exploration</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Sheriff Violence over time</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Police Violence over time</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="mapping-sheriff-violence" class="level2">
+<h2 class="anchored" data-anchor-id="mapping-sheriff-violence">Mapping Sheriff Violence</h2>
+<div class="cell" data-execution_count="49">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>geometry <span class="op">=</span> gpd.points_from_xy(lfc.Longitude, lfc.Latitude)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>lfc_geodf <span class="op">=</span> gpd.GeoDataFrame(lfc, geometry <span class="op">=</span> geometry)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>lfc_geodf.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="49">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Facility.ID</th>
+      <th>Jurisdiction</th>
+      <th>State</th>
+      <th>Name</th>
+      <th>Date</th>
+      <th>source</th>
+      <th>Residents.Confirmed</th>
+      <th>Staff.Confirmed</th>
+      <th>Residents.Deaths</th>
+      <th>Staff.Deaths</th>
+      <th>...</th>
+      <th>Web.Group</th>
+      <th>Address</th>
+      <th>Zipcode</th>
+      <th>City</th>
+      <th>County</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>County.FIPS</th>
+      <th>ICE.Field.Office</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>state</td>
+      <td>Alabama</td>
+      <td>ALABAMA HEADQUARTERS</td>
+      <td>2023-01-18</td>
+      <td>http://www.doc.alabama.gov/covid19news</td>
+      <td>0.0</td>
+      <td>160.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>Prison</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>POINT EMPTY</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>state</td>
+      <td>Alabama</td>
+      <td>ALABAMA TREATMENT AND EDUCATION FACILITY</td>
+      <td>2023-01-18</td>
+      <td>http://www.doc.alabama.gov/covid19news</td>
+      <td>47.0</td>
+      <td>7.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>Prison</td>
+      <td>102 INDUSTRIAL PARKWAY</td>
+      <td>35051.0</td>
+      <td>COLUMBIANA</td>
+      <td>SHELBY</td>
+      <td>33.181005</td>
+      <td>-86.624017</td>
+      <td>1117.0</td>
+      <td>NaN</td>
+      <td>POINT (-86.62402 33.18100)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>state</td>
+      <td>Alabama</td>
+      <td>ALEX CITY COMMUNITY BASED FACILITY</td>
+      <td>2023-01-18</td>
+      <td>http://www.doc.alabama.gov/covid19news</td>
+      <td>85.0</td>
+      <td>43.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>Prison</td>
+      <td>HIGHWAY 22 WEST</td>
+      <td>35011.0</td>
+      <td>ALEX CITY</td>
+      <td>COOSA</td>
+      <td>32.904471</td>
+      <td>-86.008969</td>
+      <td>1037.0</td>
+      <td>NaN</td>
+      <td>POINT (-86.00897 32.90447)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5</td>
+      <td>state</td>
+      <td>Alabama</td>
+      <td>BIBB CORRECTIONAL FACILITY</td>
+      <td>2023-01-18</td>
+      <td>http://www.doc.alabama.gov/covid19news</td>
+      <td>197.0</td>
+      <td>96.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>Prison</td>
+      <td>565 BIBB LANE</td>
+      <td>35034.0</td>
+      <td>BRENT</td>
+      <td>BIBB</td>
+      <td>32.922420</td>
+      <td>-87.164580</td>
+      <td>1007.0</td>
+      <td>NaN</td>
+      <td>POINT (-87.16458 32.92242)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>6</td>
+      <td>state</td>
+      <td>Alabama</td>
+      <td>BIRMINGHAM COMMUNITY BASED FACILITY</td>
+      <td>2023-01-18</td>
+      <td>http://www.doc.alabama.gov/covid19news</td>
+      <td>106.0</td>
+      <td>55.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>Prison</td>
+      <td>1216 25TH ST N</td>
+      <td>35234.0</td>
+      <td>BIRMINGHAM</td>
+      <td>JEFFERSON</td>
+      <td>33.531046</td>
+      <td>-86.808362</td>
+      <td>1073.0</td>
+      <td>NaN</td>
+      <td>POINT (-86.80836 33.53105)</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 35 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="66">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>world <span class="op">=</span> gpd.read_file(gpd.datasets.get_path(<span class="st">'naturalearth_lowres'</span>))</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>US <span class="op">=</span> gpd.read_file(<span class="st">'https://raw.githubusercontent.com/lindseyrogers/DH140_final_sheriffs/main/geoBoundaries-USA-ADM0_simplified.geojson'</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">30</span>,<span class="dv">30</span>))</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>US.plot(ax<span class="op">=</span>ax, alpha<span class="op">=</span><span class="fl">0.4</span>, color<span class="op">=</span><span class="st">'grey'</span>)</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>lfc_geodf.plot(column<span class="op">=</span><span class="st">'Jurisdiction'</span>, ax<span class="op">=</span>ax, legend<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Location of Facilities in the UCLA Law Dataset'</span>)</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>minx, miny, maxx, maxy <span class="op">=</span> lfc_geodf.total_bounds</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(minx, maxx)</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(miny, maxy)</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="66">
+<pre><code>(18.4236493, 48.74607791)</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="final_sheriffs_files/figure-html/cell-18-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="text-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="text-analysis">Text Analysis</h2>
+</section>
+<section id="works-cited" class="level2">
+<h2 class="anchored" data-anchor-id="works-cited">Works Cited</h2>
+<p>Mapping Police Violence UCLA Law Behind Bars Geoboundaries - ADM0 US</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
